@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mariana’s Art</title>
+<meta name="description" content="Έργα ζωγραφικής της Mariana. / Paintings by Mariana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top">Mariana’s Art</a>
+  <nav>
+    <a href="#works" data-i18n="nav_works">Έργα</a>
+    <a href="#about" data-i18n="nav_about">Η καλλιτέχνις</a>
+    <a href="#contact" data-i18n="nav_contact">Επικοινωνία</a>
+    <button class="lang" id="lang" aria-label="Language">EN</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="images/autumn-center.jpg" alt="" class="hero-img">
+    <div class="hero-text">
+      <h1>Mariana’s Art</h1>
+      <p data-i18n="hero_sub">Ζωγραφική με υφή, φως και φύση.</p>
+      <a class="btn" href="#works" data-i18n="hero_cta">Δες τα έργα</a>
+    </div>
+  </section>
+
+  <section id="works" class="work">
+    <div class="work-head from-l">
+      <h2 data-i18n="t1">Η Ήρεμη Δύναμη</h2>
+      <p class="sub" data-i18n="s1">Φθινόπωρο προς χειμώνα</p>
+      <p data-i18n="d1"></p>
+    </div>
+    <div class="tri deer">
+      <figure style="flex:770"><img class="pop" src="images/autumn-left.jpg" alt="Autumn forest, left panel"></figure>
+      <figure class="par" data-speed="-.05" style="flex:738"><img class="pop" src="images/autumn-center.jpg" alt="Deer between autumn and winter"></figure>
+      <figure style="flex:758"><img class="pop" src="images/autumn-right.jpg" alt="Autumn mountains, right panel"></figure>
+    </div>
+  </section>
+
+  <section class="work alt">
+    <div class="split">
+      <figure class="par" data-speed=".04"><img class="pop" src="images/dream.jpg" alt="Trees, mountains and sea in a dream"></figure>
+      <div class="work-head from-r">
+        <h2 data-i18n="t2">Νησί του Ονείρου</h2>
+        <p class="sub" data-i18n="s2">Στοιχεία της φύσης μέσα σε ένα όνειρο</p>
+        <p data-i18n="d2"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="work-head from-l">
+      <h2 data-i18n="t3">Χρυσές Αντανακλάσεις</h2>
+      <p class="sub" data-i18n="s3">Φως που μένει στο νερό</p>
+      <p data-i18n="d3"></p>
+      <p data-i18n="d3b"></p>
+    </div>
+    <div class="tri abs">
+      <figure><img class="pop" src="images/abstract-1.jpg" alt="Golden Reflections, left panel"></figure>
+      <figure class="par" data-speed="-.04"><img class="pop" src="images/abstract-2.jpg" alt="Golden Reflections, center panel"></figure>
+      <figure><img class="pop" src="images/abstract-3.jpg" alt="Golden Reflections, right panel"></figure>
+    </div>
+  </section>
+
+  <section id="about" class="about alt">
+    <div class="about-in">
+      <div class="portrait from-l"><img src="images/mariana.jpg" alt="Mariana"></div>
+      <div class="about-text from-r">
+        <h2 data-i18n="a_title">Η καλλιτέχνις</h2>
+        <p data-i18n="a1"></p><p data-i18n="a2"></p><p data-i18n="a3"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="contact">
+  <h2 data-i18n="c_title">Επικοινωνία</h2>
+  <p class="lead" data-i18n="c_text"></p>
+  <form id="form">
+    <input id="name" type="text" data-i18n-ph="c_name" required>
+    <input id="email" type="email" data-i18n-ph="c_email" required>
+    <select id="type"></select>
+    <select id="work" hidden></select>
+    <input id="amount" type="text" data-i18n-ph="c_amount" hidden>
+    <textarea id="msg" rows="5" data-i18n-ph="c_msg" required></textarea>
+    <label id="fileBox" class="file" hidden><span data-i18n="c_file"></span><input id="file" type="file" accept="image/*"></label>
+    <p id="status" role="status"></p>
+    <button class="btn" type="submit" data-i18n="c_send"></button>
+  </form>
+  <a class="mail" href="mailto:ms@experience-designers.com">ms@experience-designers.com</a>
+  <small>© <span id="yr"></span> Mariana’s Art</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
